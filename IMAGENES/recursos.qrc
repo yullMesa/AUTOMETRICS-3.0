@@ -1,0 +1,22 @@
+<RCC>
+  <qresource prefix="x">
+    <file>Tecnología (IT).png</file>
+    <file>Marketing y Publicidad.png</file>
+    <file>Departamento Jurídico.png</file>
+    <file>Auditoría de Calidad.png</file>
+    <file>Seguridad Vial.png</file>
+    <file>Finanzas y Facturación.png</file>
+    <file>Recursos Humanos (Conductores).png</file>
+    <file>Logística de Distribución.png</file>
+    <file>Mantenimiento Preventivo.png</file>
+    <file>flota.png</file>
+    <file>riesgo.png</file>
+    <file>rendimiento.png</file>
+    <file>humano.png</file>
+    <file>autometrics.png</file>
+    <file>gestion.png</file>
+    <file>inteligencia.png</file>
+    <file>innovacion.png</file>
+    <file>ingenieria.png</file>
+  </qresource>
+</RCC>

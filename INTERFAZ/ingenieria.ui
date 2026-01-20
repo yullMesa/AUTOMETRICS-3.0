@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1965</width>
+    <height>1249</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* 1. Fondo de la barra y color de letras principales */
+QMenuBar {
+    background-color: #000000; /* Fondo Negro Puro */
+    color: #00F0FF;            /* Letras Cian Neón */
+    border-bottom: 1px solid #1A1A1A;
+}
+
+/* 2. Estilo de los botones (Inicio, Ingeniería, etc.) */
+QMenuBar::item {
+    background: transparent;
+    padding: 5px 15px;
+    color: #00F0FF; /* Forzamos el color aquí también */
+}
+
+/* 3. Cuando pasas el mouse (Hover) */
+QMenuBar::item:selected {
+    background-color: #00F0FF;
+    color: #000000; /* Letra negra para que resalte */
+}
+
+/* 4. El menú que cae (si tienes sub-opciones) */
+QMenu {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 1px solid #00F0FF;
+}
+
+QMenu::item:selected {
+    background-color: #00F0FF;
+    color: #000000;
+}
+background-color: rgb(13, 13, 13);
+background-color: rgb(71, 71, 71);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">/* Barra de Menú Principal */
+QMenuBar {
+    background-color: #121212; /* Negro para fundirse con el fondo */
+    color: #00F0FF;            /* Letras en Cian Neón para contraste */
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 10pt;
+    font-weight: bold;
+    border-bottom: 1px solid #00F0FF; /* Línea divisoria neón */
+}
+
+/* Items de la barra (Archivo, Volver, etc.) */
+QMenuBar::item {
+    background: transparent;
+    padding: 5px 15px;
+}
+
+/* Al pasar el mouse por los items superiores */
+QMenuBar::item:selected {
+    background-color: #00F0FF;
+    color: #000000; /* Letra negra para que resalte sobre el cian */
+    border-radius: 3px;
+}
+
+/* El menú desplegable (QMenu) */
+QMenu {
+    background-color: #1a1a1a; /* Un gris muy oscuro casi negro */
+    color: #FFFFFF;            /* Letras blancas para lectura clara */
+    border: 1px solid #00F0FF; /* Borde cian */
+}
+
+/* Opciones dentro del menú desplegable */
+QMenu::item {
+    padding: 8px 25px;
+}
+
+/* Al pasar el mouse por una opción del desplegable */
+QMenu::item:selected {
+    background-color: #00F0FF;
+    color: #000000;
+}</string>
+   </property>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>9</y>
+      <width>1951</width>
+      <height>1191</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <widget class="QWidget" name="page">
+        <widget class="QWidget" name="horizontalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>-1</x>
+           <y>9</y>
+           <width>1951</width>
+           <height>1171</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget_2">
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
+            <widget class="QWidget" name="page_3">
+             <widget class="QWidget" name="gridLayoutWidget">
+              <property name="geometry">
+               <rect>
+                <x>9</x>
+                <y>9</y>
+                <width>1911</width>
+                <height>1151</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="0" column="1">
+                <widget class="QFrame" name="frame_2">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Shape::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Shadow::Raised</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QFrame" name="frame">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Shape::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Shadow::Raised</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QFrame" name="frame_3">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Shape::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Shadow::Raised</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QFrame" name="frame_4">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Shape::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Shadow::Raised</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="page_4">
+             <widget class="QWidget" name="gridLayoutWidget_2">
+              <property name="geometry">
+               <rect>
+                <x>-1</x>
+                <y>-1</y>
+                <width>1951</width>
+                <height>1171</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_2">
+               <item row="0" column="1">
+                <widget class="QTextBrowser" name="textBrowser">
+                 <property name="styleSheet">
+                  <string notr="true">QTextBrowser {
+    background-color: #1a1a1a;      /* Fondo oscuro consistente con tus LineEdits */
+    color: #00F0FF;                 /* Letras Cian Neón (el color de tus Labels) */
+    font-family: 'Consolas', 'Monospace', 'Courier New'; /* Fuentes tipográficas de ingeniería */
+    font-size: 11pt;                /* Tamaño ligeramente mayor para evitar fatiga visual */
+    line-height: 1.4;               /* Aumenta el espacio entre líneas */
+    border: 1px solid #333333;      /* Borde sutil para definir el área */
+    border-left: 4px solid #00F0FF; /* Detalle lateral para indicar que es una consola activa */
+    padding: 15px;                  /* Espacio interno para que el texto no toque los bordes */
+}
+
+/* Mejora de la barra de desplazamiento para que no distraiga */
+QScrollBar:vertical {
+    border: none;
+    background: #121212;
+    width: 8px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #00F0FF;            /* Scrollbar cian para combinar */
+    min-height: 20px;
+    border-radius: 4px;
+}</string>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas','Monospace','Courier New'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;==========================================================&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;        SISTEMA DE GESTIÓN DE INGENIERÍA - AUTOMETRICS 3.0&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;==========================================================&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;[ESTADO]: SISTEMA OPERATIVO&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;[USUARIO]: INGENIERO DE PROYECTO&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;[FECHA]: 2026-01-20&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;&amp;gt;&amp;gt;&amp;gt; GUÍA DE OPERACIÓN RÁPIDA:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;1. REGISTRO DE DATOS:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;   - Ingrese la información en los campos de la izquierda.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;   - El ID de Chasis debe ser único (Ej: AM-X1-001).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;   - Use solo números en Kilometraje y Costo.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;2. BOTÓN AÑADIR (AZUL):&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;   - Envía los datos actuales a la Base de Datos.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;   - Si el registro es exitoso, se verá reflejado en la tabla.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;3. BOTÓN ACTUALIZAR (AZUL):&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;   - Seleccione primero una fila de la tabla superior.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;   - Modifique los campos necesarios y presione Actualizar.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;4. BOTÓN ELIMINAR (ROJO):&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;   - Borra el prototipo seleccionado de forma permanente.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;   - ¡ADVERTENCIA!: Esta acción no se puede deshacer.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;5. NAVEGACIÓN:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;   - Use la MenuBar superior para cambiar entre áreas.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;   - Para volver al menú principal, seleccione 'Inicio'.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;----------------------------------------------------------&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;[LOG]: Esperando entrada de datos...&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Segoe UI'; font-size:9pt;&quot;&gt;----------------------------------------------------------&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QTableWidget" name="tableWidget_inventario">
+                 <property name="styleSheet">
+                  <string notr="true">/* 1. Estilo general de la tabla */
+QTableWidget {
+    background-color: #121212;      /* Negro profundo */
+    color: #FFFFFF;                 /* Texto blanco para legibilidad */
+    gridline-color: #1A1A1A;        /* Rejilla casi invisible */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 10pt;
+    border: 1px solid #00F0FF;      /* Borde exterior cian neón */
+    selection-background-color: rgba(0, 240, 255, 0.2); /* Fondo de selección cian traslúcido */
+    selection-color: #00F0FF;       /* Texto seleccionado cian */
+}
+
+/* 2. Estilo de los encabezados (Las etiquetas de arriba) */
+QHeaderView::section {
+    background-color: #000000;      /* Fondo negro puro */
+    color: #00F0FF;                 /* Letras cian neón */
+    padding: 6px;
+    border: none;
+    border-bottom: 2px solid #00F0FF; /* Línea de base cian */
+    font-weight: bold;
+    text-transform: uppercase;      /* Todo en mayúsculas para estilo técnico */
+}
+
+/* 3. Estilo de las filas al pasar el mouse (Hover) */
+QTableWidget::item:hover {
+    background-color: #1A1A1A;
+    color: #00F0FF;
+}
+
+/* 4. Estilo de la barra de desplazamiento (Scrollbar) */
+QScrollBar:vertical {
+    border: none;
+    background: #000000;
+    width: 10px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #00F0FF;            /* El &quot;cubo&quot; del scroll es cian */
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+}</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <layout class="QFormLayout" name="formLayout">
+                 <property name="horizontalSpacing">
+                  <number>8</number>
+                 </property>
+                 <property name="verticalSpacing">
+                  <number>50</number>
+                 </property>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_2">
+                   <property name="styleSheet">
+                    <string notr="true">/* Estilo general para todos los labels */
+QLabel {
+    color: #00F0FF;                 /* Texto Cian Neón */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-weight: bold;
+    background: transparent;
+}
+
+/* Si quieres un estilo especial para los títulos (asumiendo que les pongas un nombre de objeto específico) */
+QLabel#tituloSeccion {
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00F0FF;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>ID de Chasis (VIN Experimental)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLineEdit" name="lineEdit">
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit {
+    background-color: #1a1a1a;      /* Gris muy oscuro para contraste con el fondo negro */
+    color: #ffffff;                 /* Texto blanco para escribir */
+    border: 1px solid #333333;      /* Borde inicial sutil */
+    border-radius: 5px;
+    padding: 8px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    selection-background-color: #00F0FF;
+    selection-color: #000000;
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+QLineEdit:focus {
+    border: 1px solid #00F0FF;      /* El borde se vuelve cian neón */
+    background-color: #050505;      /* Se oscurece más al estar activo */
+}
+
+/* Estilo para el texto de ayuda (placeholder) */
+QLineEdit::placeholder {
+    color: #555555;
+    font-style: italic;
+}</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Un código único para cada prototipo físico</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_3">
+                   <property name="styleSheet">
+                    <string notr="true">/* Estilo general para todos los labels */
+QLabel {
+    color: #00F0FF;                 /* Texto Cian Neón */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-weight: bold;
+    background: transparent;
+}
+
+/* Si quieres un estilo especial para los títulos (asumiendo que les pongas un nombre de objeto específico) */
+QLabel#tituloSeccion {
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00F0FF;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Estado de Disponibilidad</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="label_4">
+                   <property name="styleSheet">
+                    <string notr="true">/* Estilo general para todos los labels */
+QLabel {
+    color: #00F0FF;                 /* Texto Cian Neón */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-weight: bold;
+    background: transparent;
+}
+
+/* Si quieres un estilo especial para los títulos (asumiendo que les pongas un nombre de objeto específico) */
+QLabel#tituloSeccion {
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00F0FF;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Kilometraje/Horas de Uso</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLineEdit" name="lineEdit_2">
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit {
+    background-color: #1a1a1a;      /* Gris muy oscuro para contraste con el fondo negro */
+    color: #ffffff;                 /* Texto blanco para escribir */
+    border: 1px solid #333333;      /* Borde inicial sutil */
+    border-radius: 5px;
+    padding: 8px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    selection-background-color: #00F0FF;
+    selection-color: #000000;
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+QLineEdit:focus {
+    border: 1px solid #00F0FF;      /* El borde se vuelve cian neón */
+    background-color: #050505;      /* Se oscurece más al estar activo */
+}
+
+/* Estilo para el texto de ayuda (placeholder) */
+QLineEdit::placeholder {
+    color: #555555;
+    font-style: italic;
+}</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string>(En Pruebas, En Mantenimiento, Desguazado, En Exhibición)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QLineEdit" name="lineEdit_3">
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit {
+    background-color: #1a1a1a;      /* Gris muy oscuro para contraste con el fondo negro */
+    color: #ffffff;                 /* Texto blanco para escribir */
+    border: 1px solid #333333;      /* Borde inicial sutil */
+    border-radius: 5px;
+    padding: 8px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    selection-background-color: #00F0FF;
+    selection-color: #000000;
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+QLineEdit:focus {
+    border: 1px solid #00F0FF;      /* El borde se vuelve cian neón */
+    background-color: #050505;      /* Se oscurece más al estar activo */
+}
+
+/* Estilo para el texto de ayuda (placeholder) */
+QLineEdit::placeholder {
+    color: #555555;
+    font-style: italic;
+}</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Cuánto estrés ha soportado ese prototipo específico</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="label_5">
+                   <property name="styleSheet">
+                    <string notr="true">/* Estilo general para todos los labels */
+QLabel {
+    color: #00F0FF;                 /* Texto Cian Neón */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-weight: bold;
+    background: transparent;
+}
+
+/* Si quieres un estilo especial para los títulos (asumiendo que les pongas un nombre de objeto específico) */
+QLabel#tituloSeccion {
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00F0FF;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Ubicación Física</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QLabel" name="label_6">
+                   <property name="styleSheet">
+                    <string notr="true">/* Estilo general para todos los labels */
+QLabel {
+    color: #00F0FF;                 /* Texto Cian Neón */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-weight: bold;
+    background: transparent;
+}
+
+/* Si quieres un estilo especial para los títulos (asumiendo que les pongas un nombre de objeto específico) */
+QLabel#tituloSeccion {
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00F0FF;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Versión de Firmware</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="0">
+                  <widget class="QLabel" name="label_7">
+                   <property name="styleSheet">
+                    <string notr="true">/* Estilo general para todos los labels */
+QLabel {
+    color: #00F0FF;                 /* Texto Cian Neón */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-weight: bold;
+    background: transparent;
+}
+
+/* Si quieres un estilo especial para los títulos (asumiendo que les pongas un nombre de objeto específico) */
+QLabel#tituloSeccion {
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00F0FF;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Costo de Construcción</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QLineEdit" name="lineEdit_4">
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit {
+    background-color: #1a1a1a;      /* Gris muy oscuro para contraste con el fondo negro */
+    color: #ffffff;                 /* Texto blanco para escribir */
+    border: 1px solid #333333;      /* Borde inicial sutil */
+    border-radius: 5px;
+    padding: 8px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    selection-background-color: #00F0FF;
+    selection-color: #000000;
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+QLineEdit:focus {
+    border: 1px solid #00F0FF;      /* El borde se vuelve cian neón */
+    background-color: #050505;      /* Se oscurece más al estar activo */
+}
+
+/* Estilo para el texto de ayuda (placeholder) */
+QLineEdit::placeholder {
+    color: #555555;
+    font-style: italic;
+}</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string>(Hangar A, Laboratorio de Túnel de Viento, Pista de Pruebas).</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QLineEdit" name="lineEdit_5">
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit {
+    background-color: #1a1a1a;      /* Gris muy oscuro para contraste con el fondo negro */
+    color: #ffffff;                 /* Texto blanco para escribir */
+    border: 1px solid #333333;      /* Borde inicial sutil */
+    border-radius: 5px;
+    padding: 8px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    selection-background-color: #00F0FF;
+    selection-color: #000000;
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+QLineEdit:focus {
+    border: 1px solid #00F0FF;      /* El borde se vuelve cian neón */
+    background-color: #050505;      /* Se oscurece más al estar activo */
+}
+
+/* Estilo para el texto de ayuda (placeholder) */
+QLineEdit::placeholder {
+    color: #555555;
+    font-style: italic;
+}</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Qué versión del software del vehículo tiene instalada actualmente</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="1">
+                  <widget class="QLineEdit" name="lineEdit_6">
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit {
+    background-color: #1a1a1a;      /* Gris muy oscuro para contraste con el fondo negro */
+    color: #ffffff;                 /* Texto blanco para escribir */
+    border: 1px solid #333333;      /* Borde inicial sutil */
+    border-radius: 5px;
+    padding: 8px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    selection-background-color: #00F0FF;
+    selection-color: #000000;
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+QLineEdit:focus {
+    border: 1px solid #00F0FF;      /* El borde se vuelve cian neón */
+    background-color: #050505;      /* Se oscurece más al estar activo */
+}
+
+/* Estilo para el texto de ayuda (placeholder) */
+QLineEdit::placeholder {
+    color: #555555;
+    font-style: italic;
+}</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Cuánto dinero se invirtió específicamente en armar esa unidad</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="1">
+                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <item>
+                    <widget class="QPushButton" name="pushButton">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+    background-color: rgba(0, 240, 255, 0.1); /* Fondo azul traslúcido */
+    color: #00F0FF;                            /* Texto Cian */
+    border: 2px solid #00F0FF;                 /* Borde neón */
+    border-radius: 8px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 10px 20px;
+}
+
+/* Efecto al pasar el mouse */
+QPushButton:hover {
+    background-color: #00F0FF;                 /* El botón se llena de color */
+    color: #000000;                            /* Texto negro para contraste */
+}
+
+/* Efecto al hacer clic */
+QPushButton:pressed {
+    background-color: #008BA3;                 /* Azul más oscuro */
+    border: 2px solid #008BA3;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>AÑADIR</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_2">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+    background-color: rgba(255, 0, 51, 0.1);   /* Fondo rojo traslúcido */
+    color: #FF0033;                            /* Texto Rojo Neón */
+    border: 2px solid #FF0033;                 /* Borde rojo */
+    border-radius: 8px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 10px 20px;
+}
+
+/* Efecto al pasar el mouse */
+QPushButton:hover {
+    background-color: #FF0033;                 /* Se llena de rojo */
+    color: #FFFFFF;                            /* Texto blanco */
+}
+
+/* Efecto al hacer clic */
+QPushButton:pressed {
+    background-color: #B30024;                 /* Rojo oscuro */
+    border: 2px solid #B30024;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>ELIMINAR</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_3">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+    background-color: rgba(0, 240, 255, 0.1); /* Fondo azul traslúcido */
+    color: #00F0FF;                            /* Texto Cian */
+    border: 2px solid #00F0FF;                 /* Borde neón */
+    border-radius: 8px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 10px 20px;
+}
+
+/* Efecto al pasar el mouse */
+QPushButton:hover {
+    background-color: #00F0FF;                 /* El botón se llena de color */
+    color: #000000;                            /* Texto negro para contraste */
+}
+
+/* Efecto al hacer clic */
+QPushButton:pressed {
+    background-color: #008BA3;                 /* Azul más oscuro */
+    border: 2px solid #008BA3;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>ACTUALIZAR</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_4">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton {
+    background-color: rgba(0, 240, 255, 0.1); /* Fondo azul traslúcido */
+    color: #00F0FF;                            /* Texto Cian */
+    border: 2px solid #00F0FF;                 /* Borde neón */
+    border-radius: 8px;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 10px 20px;
+}
+
+/* Efecto al pasar el mouse */
+QPushButton:hover {
+    background-color: #00F0FF;                 /* El botón se llena de color */
+    color: #000000;                            /* Texto negro para contraste */
+}
+
+/* Efecto al hacer clic */
+QPushButton:pressed {
+    background-color: #008BA3;                 /* Azul más oscuro */
+    border: 2px solid #008BA3;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>EXPORTAR</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_2"/>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1965</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuInventario_de_Prototipos">
+    <property name="title">
+     <string>Inventario de Prototipos</string>
+    </property>
+    <addaction name="actionDASHBOARD"/>
+    <addaction name="actionCRUD"/>
+    <addaction name="actionANAL_TICA"/>
+   </widget>
+   <widget class="QMenu" name="menuControl_de_Pruebas_y_Calidad_QA_Engineering">
+    <property name="title">
+     <string>Control de Pruebas y Calidad (QA Engineering</string>
+    </property>
+    <addaction name="actionCRUD_2"/>
+    <addaction name="actionCRUD_3"/>
+    <addaction name="actionANAL_TICA_2"/>
+   </widget>
+   <widget class="QMenu" name="menuI_D_Eficiencia_y_Sostenibilidad">
+    <property name="title">
+     <string>I+D: Eficiencia y Sostenibilidad</string>
+    </property>
+    <addaction name="actionCRUD_4"/>
+    <addaction name="actionCRUD_5"/>
+    <addaction name="actionANAL_TICA_3"/>
+   </widget>
+   <widget class="QMenu" name="menuMantenimiento_y_Post_Venta_T_cnica_Service_Engineering">
+    <property name="title">
+     <string>Mantenimiento y Post-Venta Técnica (Service Engineering)</string>
+    </property>
+    <addaction name="actionDASHBOARD_2"/>
+    <addaction name="actionCRUD_6"/>
+    <addaction name="actionANALITICA"/>
+   </widget>
+   <widget class="QMenu" name="menuLog_stica_de_Suministros_T_cnicos_BOM_Bill_of_Materials">
+    <property name="title">
+     <string>Logística de Suministros Técnicos (BOM - Bill of Materials)</string>
+    </property>
+    <addaction name="actionDASHBOARD_3"/>
+    <addaction name="actionCRUD_7"/>
+    <addaction name="actionANAL_TICA_4"/>
+   </widget>
+   <addaction name="menuInventario_de_Prototipos"/>
+   <addaction name="menuControl_de_Pruebas_y_Calidad_QA_Engineering"/>
+   <addaction name="menuI_D_Eficiencia_y_Sostenibilidad"/>
+   <addaction name="menuMantenimiento_y_Post_Venta_T_cnica_Service_Engineering"/>
+   <addaction name="menuLog_stica_de_Suministros_T_cnicos_BOM_Bill_of_Materials"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionDASHBOARD">
+   <property name="text">
+    <string>DASHBOARD</string>
+   </property>
+  </action>
+  <action name="actionCRUD">
+   <property name="text">
+    <string>CRUD</string>
+   </property>
+  </action>
+  <action name="actionANAL_TICA">
+   <property name="text">
+    <string>ANALÍTICA</string>
+   </property>
+  </action>
+  <action name="actionCRUD_2">
+   <property name="text">
+    <string>DASHBOARD</string>
+   </property>
+  </action>
+  <action name="actionCRUD_3">
+   <property name="text">
+    <string>CRUD</string>
+   </property>
+  </action>
+  <action name="actionANAL_TICA_2">
+   <property name="text">
+    <string>ANALÍTICA</string>
+   </property>
+  </action>
+  <action name="actionCRUD_4">
+   <property name="text">
+    <string>DASHBOARD</string>
+   </property>
+  </action>
+  <action name="actionCRUD_5">
+   <property name="text">
+    <string>CRUD</string>
+   </property>
+  </action>
+  <action name="actionANAL_TICA_3">
+   <property name="text">
+    <string>ANALÍTICA</string>
+   </property>
+  </action>
+  <action name="actionDASHBOARD_2">
+   <property name="text">
+    <string>DASHBOARD</string>
+   </property>
+  </action>
+  <action name="actionCRUD_6">
+   <property name="text">
+    <string>CRUD</string>
+   </property>
+  </action>
+  <action name="actionANALITICA">
+   <property name="text">
+    <string>ANALITICA</string>
+   </property>
+  </action>
+  <action name="actionDASHBOARD_3">
+   <property name="text">
+    <string>DASHBOARD</string>
+   </property>
+  </action>
+  <action name="actionCRUD_7">
+   <property name="text">
+    <string>CRUD</string>
+   </property>
+  </action>
+  <action name="actionANAL_TICA_4">
+   <property name="text">
+    <string>ANALÍTICA</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

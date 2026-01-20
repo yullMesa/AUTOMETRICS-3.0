@@ -1,0 +1,1818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1973</width>
+    <height>1239</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(52, 52, 52);</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>9</y>
+     <width>151</width>
+     <height>1221</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="push_atras">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    /* Fondo oscuro profundo con borde sutil */
+    background-color: #1a1b26;
+    color: #73daca; /* Verde neón para el texto */
+    border: 2px solid #414868;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    
+    /* Transición suave (solo funciona en algunos motores de PySide) */
+    outline: none;
+}
+
+/* Estado cuando pasas el mouse por encima */
+QPushButton:hover {
+    background-color: #24283b;
+    border: 2px solid #73daca; /* Brillo neón en el borde */
+    color: #ffffff;
+}
+
+/* Estado cuando presionas el botón */
+QPushButton:pressed {
+    background-color: #73daca;
+    color: #1a1b26; /* Invierte colores para feedback visual */
+    border: 2px solid #ffffff;
+    padding-left: 12px; /* Efecto de hundimiento */
+    padding-top: 12px;
+}
+
+/* Estado cuando el botón está deshabilitado */
+QPushButton:disabled {
+    background-color: #16161e;
+    color: #414868;
+    border: 1px solid #24283b;
+}</string>
+      </property>
+      <property name="text">
+       <string>Atras</string>
+      </property>
+      <property name="icon">
+       <iconset theme="go-previous"/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>1827</x>
+     <y>10</y>
+     <width>141</width>
+     <height>1221</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QPushButton" name="push_sgte">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    /* Fondo oscuro profundo con borde sutil */
+    background-color: #1a1b26;
+    color: #73daca; /* Verde neón para el texto */
+    border: 2px solid #414868;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    
+    /* Transición suave (solo funciona en algunos motores de PySide) */
+    outline: none;
+}
+
+/* Estado cuando pasas el mouse por encima */
+QPushButton:hover {
+    background-color: #24283b;
+    border: 2px solid #73daca; /* Brillo neón en el borde */
+    color: #ffffff;
+}
+
+/* Estado cuando presionas el botón */
+QPushButton:pressed {
+    background-color: #73daca;
+    color: #1a1b26; /* Invierte colores para feedback visual */
+    border: 2px solid #ffffff;
+    padding-left: 12px; /* Efecto de hundimiento */
+    padding-top: 12px;
+}
+
+/* Estado cuando el botón está deshabilitado */
+QPushButton:disabled {
+    background-color: #16161e;
+    color: #414868;
+    border: 1px solid #24283b;
+}</string>
+      </property>
+      <property name="text">
+       <string>Siguiente</string>
+      </property>
+      <property name="icon">
+       <iconset theme="go-next" resource="../IMAGENES/recursos.qrc">
+        <normaloff>:/x/ingenieria.png</normaloff>:/x/ingenieria.png</iconset>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>149</x>
+     <y>19</y>
+     <width>1681</width>
+     <height>1221</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <widget class="QWidget" name="gridLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>-1</x>
+          <y>-1</y>
+          <width>1681</width>
+          <height>1211</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="2" column="0">
+          <widget class="QToolButton" name="toolButton_4">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+           </property>
+           <property name="text">
+            <string>Inteligencia Financiera</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../IMAGENES/recursos.qrc">
+             <normaloff>:/x/inteligencia.png</normaloff>:/x/inteligencia.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>500</width>
+             <height>350</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QToolButton" name="toolButton_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+           </property>
+           <property name="text">
+            <string>Rendimiento de Mercado</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../IMAGENES/recursos.qrc">
+             <normaloff>:/x/rendimiento.png</normaloff>:/x/rendimiento.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>500</width>
+             <height>350</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QToolButton" name="toolButton_5">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+           </property>
+           <property name="text">
+            <string>Innovación y Tecnología</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../IMAGENES/recursos.qrc">
+             <normaloff>:/x/innovacion.png</normaloff>:/x/innovacion.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>500</width>
+             <height>350</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QToolButton" name="tool_ingenieria">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../IMAGENES/recursos.qrc">
+             <normaloff>:/x/ingenieria.png</normaloff>:/x/ingenieria.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>500</width>
+             <height>350</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QToolButton" name="toolButton_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+           </property>
+           <property name="text">
+            <string>Gestión de la Cadena de Valor</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../IMAGENES/recursos.qrc">
+             <normaloff>:/x/gestion.png</normaloff>:/x/gestion.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>500</width>
+             <height>350</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QToolButton" name="toolButton_11">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+           </property>
+           <property name="text">
+            <string>AutoMetrics Comprar</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../IMAGENES/recursos.qrc">
+             <normaloff>:/x/autometrics.png</normaloff>:/x/autometrics.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>500</width>
+             <height>350</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QToolButton" name="toolButton_12">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+           </property>
+           <property name="text">
+            <string>Capital Humano y Servicio</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../IMAGENES/recursos.qrc">
+             <normaloff>:/x/humano.png</normaloff>:/x/humano.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>500</width>
+             <height>350</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QToolButton" name="toolButton_13">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+           </property>
+           <property name="text">
+            <string>Riesgo Operacional</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../IMAGENES/recursos.qrc">
+             <normaloff>:/x/riesgo.png</normaloff>:/x/riesgo.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>500</width>
+             <height>350</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QToolButton" name="tool_flota">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+           </property>
+           <property name="text">
+            <string>Gestión de Flota</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../IMAGENES/recursos.qrc">
+             <normaloff>:/x/flota.png</normaloff>
+             <disabledoff>:/x/flota.png</disabledoff>:/x/flota.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>500</width>
+             <height>350</height>
+            </size>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <widget class="QWidget" name="gridLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>-1</x>
+          <y>-1</y>
+          <width>1681</width>
+          <height>1211</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QStackedWidget" name="stackedWidget_2">
+           <property name="currentIndex">
+            <number>1</number>
+           </property>
+           <widget class="QWidget" name="page_3">
+            <widget class="QWidget" name="gridLayoutWidget_3">
+             <property name="geometry">
+              <rect>
+               <x>-1</x>
+               <y>-1</y>
+               <width>1681</width>
+               <height>1211</height>
+              </rect>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="2" column="0">
+               <widget class="QToolButton" name="toolButton_7">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Inteligencia Financiera</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/inteligencia.png</normaloff>:/x/inteligencia.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QToolButton" name="toolButton_8">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Rendimiento de Mercado</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/rendimiento.png</normaloff>:/x/rendimiento.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QToolButton" name="toolButton_9">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Innovación y Tecnología</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/innovacion.png</normaloff>:/x/innovacion.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QToolButton" name="toolButton_10">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/ingenieria.png</normaloff>:/x/ingenieria.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QToolButton" name="toolButton_14">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Gestión de la Cadena de Valor</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/gestion.png</normaloff>:/x/gestion.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QToolButton" name="toolButton_15">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>AutoMetrics Comprar</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/autometrics.png</normaloff>:/x/autometrics.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QToolButton" name="toolButton_16">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Capital Humano y Servicio</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/humano.png</normaloff>:/x/humano.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QToolButton" name="toolButton_17">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Riesgo Operacional</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/riesgo.png</normaloff>:/x/riesgo.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QToolButton" name="tool_flota_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Gestión de Flota</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <disabledoff>:/x/flota.png</disabledoff>
+                 </iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="page_4">
+            <widget class="QWidget" name="gridLayoutWidget_4">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>1681</width>
+               <height>1211</height>
+              </rect>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="2" column="0">
+               <widget class="QToolButton" name="toolButton_6">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Inteligencia Financiera</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/Recursos Humanos (Conductores).png</normaloff>:/x/Recursos Humanos (Conductores).png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QToolButton" name="toolButton_18">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Rendimiento de Mercado</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/Departamento Jurídico.png</normaloff>:/x/Departamento Jurídico.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QToolButton" name="toolButton_19">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Innovación y Tecnología</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/Logística de Distribución.png</normaloff>:/x/Logística de Distribución.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QToolButton" name="toolButton_20">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../IMAGENES/Mantenimiento Preventivo.png</normaloff>
+                  <disabledoff>:/x/Mantenimiento Preventivo.png</disabledoff>../IMAGENES/Mantenimiento Preventivo.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QToolButton" name="toolButton_21">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Gestión de la Cadena de Valor</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/Finanzas y Facturación.png</normaloff>:/x/Finanzas y Facturación.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QToolButton" name="toolButton_22">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>AutoMetrics Comprar</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/Seguridad Vial.png</normaloff>:/x/Seguridad Vial.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QToolButton" name="toolButton_23">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Capital Humano y Servicio</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/Auditoría de Calidad.png</normaloff>:/x/Auditoría de Calidad.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QToolButton" name="toolButton_24">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Riesgo Operacional</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/Marketing y Publicidad.png</normaloff>:/x/Marketing y Publicidad.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QToolButton" name="tool_flota_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QToolButton {
+    /* Fondo con un ligero gradiente oscuro */
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #24283b, stop:1 #1a1b26);
+    color: #a9b1d6; /* Gris azulado claro */
+    border: 1px solid #414868;
+    border-radius: 12px; /* Esquinas más redondeadas para la V3 */
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estado al pasar el mouse (Efecto de iluminación) */
+QToolButton:hover {
+    background-color: #2f3549;
+    border: 1px solid #7aa2f7; /* Azul neón */
+    color: #ffffff;
+    /* Efecto de borde brillante */
+}
+
+/* Estado cuando el vehículo está seleccionado o presionado */
+QToolButton:pressed {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    border: 1px solid #ffffff;
+}
+
+/* Estilo específico para el texto dentro del ToolButton */
+QToolButton::menu-indicator {
+    image: none; /* Elimina la flecha pequeña si tuviera menú */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Gestión de Flota</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../IMAGENES/recursos.qrc">
+                  <normaloff>:/x/Tecnología (IT).png</normaloff>
+                  <disabledoff>:/x/Tecnología (IT).png</disabledoff>:/x/Tecnología (IT).png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>500</width>
+                  <height>350</height>
+                 </size>
+                </property>
+                <property name="toolButtonStyle">
+                 <enum>Qt::ToolButtonStyle::ToolButtonIconOnly</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../IMAGENES/recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>
