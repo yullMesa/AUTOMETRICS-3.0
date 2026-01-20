@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1965</width>
+    <width>1964</width>
     <height>1249</height>
    </rect>
   </property>
@@ -102,7 +102,10 @@ QMenu::item:selected {
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QStackedWidget" name="stackedWidget">
+      <widget class="QStackedWidget" name="stackedWidget_principal">
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
        <widget class="QWidget" name="page">
         <widget class="QWidget" name="horizontalLayoutWidget_2">
          <property name="geometry">
@@ -117,7 +120,7 @@ QMenu::item:selected {
           <item>
            <widget class="QStackedWidget" name="stackedWidget_2">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="page_3">
              <widget class="QWidget" name="gridLayoutWidget">
@@ -147,7 +150,7 @@ QMenu::item:selected {
                 </widget>
                </item>
                <item row="0" column="0">
-                <widget class="QFrame" name="frame">
+                <widget class="QFrame" name="frame_grafica">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                    <horstretch>0</horstretch>
@@ -335,7 +338,7 @@ QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
                 </widget>
                </item>
                <item row="0" column="0">
-                <widget class="QLabel" name="label">
+                <widget class="QLabel" name="label_imagen">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                    <horstretch>0</horstretch>
@@ -344,6 +347,9 @@ QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
                  </property>
                  <property name="text">
                   <string/>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignCenter</set>
                  </property>
                 </widget>
                </item>
@@ -382,7 +388,7 @@ QLabel#tituloSeccion {
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="QLineEdit" name="lineEdit">
+                  <widget class="QLineEdit" name="lineEdit_chasis">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit {
     background-color: #1a1a1a;      /* Gris muy oscuro para contraste con el fondo negro */
@@ -465,7 +471,7 @@ QLabel#tituloSeccion {
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QLineEdit" name="lineEdit_2">
+                  <widget class="QLineEdit" name="txt_estado">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit {
     background-color: #1a1a1a;      /* Gris muy oscuro para contraste con el fondo negro */
@@ -496,7 +502,7 @@ QLineEdit::placeholder {
                   </widget>
                  </item>
                  <item row="2" column="1">
-                  <widget class="QLineEdit" name="lineEdit_3">
+                  <widget class="QLineEdit" name="txt_kilometraje">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit {
     background-color: #1a1a1a;      /* Gris muy oscuro para contraste con el fondo negro */
@@ -605,7 +611,7 @@ QLabel#tituloSeccion {
                   </widget>
                  </item>
                  <item row="3" column="1">
-                  <widget class="QLineEdit" name="lineEdit_4">
+                  <widget class="QLineEdit" name="txt_ubicacion">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit {
     background-color: #1a1a1a;      /* Gris muy oscuro para contraste con el fondo negro */
@@ -636,7 +642,7 @@ QLineEdit::placeholder {
                   </widget>
                  </item>
                  <item row="4" column="1">
-                  <widget class="QLineEdit" name="lineEdit_5">
+                  <widget class="QLineEdit" name="txt_version">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit {
     background-color: #1a1a1a;      /* Gris muy oscuro para contraste con el fondo negro */
@@ -667,7 +673,7 @@ QLineEdit::placeholder {
                   </widget>
                  </item>
                  <item row="5" column="1">
-                  <widget class="QLineEdit" name="lineEdit_6">
+                  <widget class="QLineEdit" name="txt_costo">
                    <property name="styleSheet">
                     <string notr="true">QLineEdit {
     background-color: #1a1a1a;      /* Gris muy oscuro para contraste con el fondo negro */
@@ -700,7 +706,7 @@ QLineEdit::placeholder {
                  <item row="6" column="1">
                   <layout class="QHBoxLayout" name="horizontalLayout_3">
                    <item>
-                    <widget class="QPushButton" name="pushButton">
+                    <widget class="QPushButton" name="push_anadir">
                      <property name="styleSheet">
                       <string notr="true">QPushButton {
     background-color: rgba(0, 240, 255, 0.1); /* Fondo azul traslúcido */
@@ -731,7 +737,7 @@ QPushButton:pressed {
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_2">
+                    <widget class="QPushButton" name="push_eliminar">
                      <property name="styleSheet">
                       <string notr="true">QPushButton {
     background-color: rgba(255, 0, 51, 0.1);   /* Fondo rojo traslúcido */
@@ -762,7 +768,7 @@ QPushButton:pressed {
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_3">
+                    <widget class="QPushButton" name="push_actualizar">
                      <property name="styleSheet">
                       <string notr="true">QPushButton {
     background-color: rgba(0, 240, 255, 0.1); /* Fondo azul traslúcido */
@@ -793,7 +799,7 @@ QPushButton:pressed {
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="pushButton_4">
+                    <widget class="QPushButton" name="push_exportar">
                      <property name="styleSheet">
                       <string notr="true">QPushButton {
     background-color: rgba(0, 240, 255, 0.1); /* Fondo azul traslúcido */
@@ -830,6 +836,424 @@ QPushButton:pressed {
               </layout>
              </widget>
             </widget>
+            <widget class="QWidget" name="page_5">
+             <widget class="QWidget" name="verticalLayoutWidget">
+              <property name="geometry">
+               <rect>
+                <x>100</x>
+                <y>10</y>
+                <width>271</width>
+                <height>281</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <widget class="QToolBox" name="toolBox">
+                 <property name="styleSheet">
+                  <string notr="true">QToolBox::tab {
+            background: #1e1e1e;
+            color: #00F0FF;
+            border-bottom: 1px solid #333;
+            font-weight: bold;
+        }
+        QToolBox::tab:selected {
+            background: #2b2b2b;
+            border-bottom: 2px solid #00F0FF;
+        }
+</string>
+                 </property>
+                 <property name="currentIndex">
+                  <number>0</number>
+                 </property>
+                 <widget class="QWidget" name="page_6">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>269</width>
+                    <height>219</height>
+                   </rect>
+                  </property>
+                  <attribute name="label">
+                   <string>columnas</string>
+                  </attribute>
+                  <widget class="QWidget" name="verticalLayoutWidget_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>9</x>
+                     <y>19</y>
+                     <width>251</width>
+                     <height>191</height>
+                    </rect>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_2">
+                    <item>
+                     <widget class="QComboBox" name="comboBox_opcion">
+                      <property name="styleSheet">
+                       <string notr="true">/* Estilo general del ComboBox */
+QComboBox {
+    background-color: #1e1e1e;      /* Fondo oscuro profundo */
+    border: 1px solid #3d3d3d;       /* Borde sutil */
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: #e0e0e0;                 /* Texto gris claro */
+    font-size: 12px;
+    min-width: 150px;
+}
+
+/* Cuando pasas el ratón por encima (Hover) */
+QComboBox:hover {
+    border: 1px solid #00F0FF;       /* Resplandor cian/neón */
+    background-color: #252525;
+}
+
+/* Estilo de la flecha de despliegue */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    border-left: 1px solid #3d3d3d;
+}
+
+/* Estilo del icono de la flecha */
+QComboBox::down-arrow {
+    image: url(icon_flecha_abajo.png); /* Si tienes un icono, si no, usa el estándar */
+    width: 10px;
+    height: 10px;
+}
+
+/* Estilo del menú desplegable (La lista que baja) */
+QAbstractItemView {
+    background-color: #1e1e1e;
+    border: 1px solid #00F0FF;
+    color: #e0e0e0;
+    selection-background-color: #00F0FF; /* Fondo del item seleccionado */
+    selection-color: #000000;            /* Texto del item seleccionado */
+    outline: 0px;
+}</string>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Columna X</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="comboBox_Opcion">
+                      <property name="styleSheet">
+                       <string notr="true">/* Estilo general del ComboBox */
+QComboBox {
+    background-color: #1e1e1e;      /* Fondo oscuro profundo */
+    border: 1px solid #3d3d3d;       /* Borde sutil */
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: #e0e0e0;                 /* Texto gris claro */
+    font-size: 12px;
+    min-width: 150px;
+}
+
+/* Cuando pasas el ratón por encima (Hover) */
+QComboBox:hover {
+    border: 1px solid #00F0FF;       /* Resplandor cian/neón */
+    background-color: #252525;
+}
+
+/* Estilo de la flecha de despliegue */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    border-left: 1px solid #3d3d3d;
+}
+
+/* Estilo del icono de la flecha */
+QComboBox::down-arrow {
+    image: url(icon_flecha_abajo.png); /* Si tienes un icono, si no, usa el estándar */
+    width: 10px;
+    height: 10px;
+}
+
+/* Estilo del menú desplegable (La lista que baja) */
+QAbstractItemView {
+    background-color: #1e1e1e;
+    border: 1px solid #00F0FF;
+    color: #e0e0e0;
+    selection-background-color: #00F0FF; /* Fondo del item seleccionado */
+    selection-color: #000000;            /* Texto del item seleccionado */
+    outline: 0px;
+}</string>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Columna Y</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="push_grafica">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #2d2d2d, stop:1 #1a1a1a);
+    border: 1px solid #FF3131; /* Rojo neón suave */
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 8px 15px;
+    min-width: 120px;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+QPushButton#push_pdf:hover {
+    background-color: #FF3131;
+    color: #000000;
+    border: 1px solid #FFFFFF;
+    /* Efecto de sombra roja para simular brillo */
+    box-shadow: 0px 0px 10px rgba(255, 49, 49, 0.7);
+}
+
+/* Efecto al presionar (Pressed) */
+QPushButton#push_pdf:pressed {
+    background-color: #B22222;
+    padding-top: 10px;
+    padding-left: 17px;
+}
+
+/* Si quieres añadirle un icono de PDF al lado del texto */
+QPushButton#push_pdf {
+    text-align: center;
+    padding-left: 10px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Graficar</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                 <widget class="QWidget" name="page_8">
+                  <attribute name="label">
+                   <string>exportar</string>
+                  </attribute>
+                  <widget class="QWidget" name="verticalLayoutWidget_5">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>9</y>
+                     <width>251</width>
+                     <height>191</height>
+                    </rect>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_5">
+                    <item>
+                     <widget class="QPushButton" name="pushButton_pdf">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, 
+                                      stop:0 #2d2d2d, stop:1 #1a1a1a);
+    border: 1px solid #FF3131; /* Rojo neón suave */
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 8px 15px;
+    min-width: 120px;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+QPushButton#push_pdf:hover {
+    background-color: #FF3131;
+    color: #000000;
+    border: 1px solid #FFFFFF;
+    /* Efecto de sombra roja para simular brillo */
+    box-shadow: 0px 0px 10px rgba(255, 49, 49, 0.7);
+}
+
+/* Efecto al presionar (Pressed) */
+QPushButton#push_pdf:pressed {
+    background-color: #B22222;
+    padding-top: 10px;
+    padding-left: 17px;
+}
+
+/* Si quieres añadirle un icono de PDF al lado del texto */
+QPushButton#push_pdf {
+    text-align: center;
+    padding-left: 10px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Exportar a pdf</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="verticalLayoutWidget_3">
+              <property name="geometry">
+               <rect>
+                <x>9</x>
+                <y>309</y>
+                <width>541</width>
+                <height>851</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <item>
+                <widget class="QTreeWidget" name="treeWidget_tabla">
+                 <property name="styleSheet">
+                  <string notr="true">/* Contenedor principal del árbol */
+QTreeWidget {
+    background-color: #121212;      /* Fondo casi negro para profundidad */
+    border: 1px solid #333333;       /* Borde oscuro sutil */
+    color: #e0e0e0;                 /* Texto principal gris claro */
+    font-size: 13px;
+    outline: 0;                     /* Quita el borde de enfoque punteado */
+}
+
+/* Estilo de las cabeceras (Columnas) */
+QHeaderView::section {
+    background-color: #1e1e1e;
+    color: #00F0FF;                 /* Títulos en cian neón */
+    padding: 5px;
+    border: 1px solid #333333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Cada fila (Item) del árbol */
+QTreeWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+/* Cuando pasas el ratón por encima de una fila */
+QTreeWidget::item:hover {
+    background-color: rgba(0, 240, 255, 0.05); /* Brillo cian muy suave */
+    color: white;
+}
+
+/* Cuando seleccionas una fila */
+QTreeWidget::item:selected {
+    background-color: rgba(0, 240, 255, 0.15);
+    border-left: 3px solid #00F0FF; /* Indicador lateral neón */
+    color: #00F0FF;
+}
+
+/* Estilo de las flechitas de expansión (Branches) */
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+    image: url(flecha_cerrada.png); /* Opcional: icono de flecha derecha */
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings {
+    image: url(flecha_abierta.png); /* Opcional: icono de flecha abajo */
+}</string>
+                 </property>
+                 <column>
+                  <property name="text">
+                   <string notr="true">1</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="verticalLayoutWidget_4">
+              <property name="geometry">
+               <rect>
+                <x>559</x>
+                <y>19</y>
+                <width>1381</width>
+                <height>1131</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <widget class="QFrame" name="frame_5">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(18, 18, 18);</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Shape::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Shadow::Raised</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextEdit" name="textEdit_conclusion">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Consolas</family>
+                   <pointsize>-1</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QTextEdit, QTextBrowser {
+    background-color: #0d0d0d;      /* Fondo negro profundo para máximo contraste */
+    border: 1px solid #333333;       /* Borde oscuro sutil */
+    border-radius: 5px;
+    color: #00F0FF;                 /* Texto color cian neón por defecto */
+    font-family: 'Consolas', 'Monospace'; /* Fuente tipo código */
+    font-size: 12px;
+    padding: 10px;
+    selection-background-color: #00F0FF;
+    selection-color: #000000;
+}
+
+/* Estilo de la barra de desplazamiento (Scrollbar) vertical */
+QScrollBar:vertical {
+    border: none;
+    background: #1a1a1a;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #333333;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #00F0FF;           /* La barra brilla al pasar el mouse */
+}
+
+/* Quitar botones de flecha del scroll para un look más limpio */
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Aqui podra escribir sus conclsuiones a la hora de evaluar las distintas posibilidades que tiene la tabla para ofrecer</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
            </widget>
           </item>
          </layout>
@@ -846,7 +1270,7 @@ QPushButton:pressed {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1965</width>
+     <width>1964</width>
      <height>27</height>
     </rect>
    </property>
@@ -890,11 +1314,18 @@ QPushButton:pressed {
     <addaction name="actionCRUD_7"/>
     <addaction name="actionANAL_TICA_4"/>
    </widget>
+   <widget class="QMenu" name="menuVOLVER">
+    <property name="title">
+     <string>VOLVER</string>
+    </property>
+    <addaction name="actionINICIO"/>
+   </widget>
    <addaction name="menuInventario_de_Prototipos"/>
    <addaction name="menuControl_de_Pruebas_y_Calidad_QA_Engineering"/>
    <addaction name="menuI_D_Eficiencia_y_Sostenibilidad"/>
    <addaction name="menuMantenimiento_y_Post_Venta_T_cnica_Service_Engineering"/>
    <addaction name="menuLog_stica_de_Suministros_T_cnicos_BOM_Bill_of_Materials"/>
+   <addaction name="menuVOLVER"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionDASHBOARD">
@@ -970,6 +1401,11 @@ QPushButton:pressed {
   <action name="actionANAL_TICA_4">
    <property name="text">
     <string>ANALÍTICA</string>
+   </property>
+  </action>
+  <action name="actionINICIO">
+   <property name="text">
+    <string>INICIO</string>
    </property>
   </action>
  </widget>
